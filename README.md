@@ -4,23 +4,23 @@ XVWA is a badly coded web application written in PHP/MySQL that helps security e
 
 XVWA is designed to understand following security issues. 
 
-SQL Injection – Error Based 
-SQL Injection – Blind
-OS Command Injection
-XPATH Injection 
-Unrestricted File Upload
-Reflected Cross Site Scripting 
-Stored Cross Site Scripting 
-DOM Based Cross Site Scripting 
-Server Side Request Forgery (Cross Site Port Attacks) 
-File Inclusion 
-Session Issues 
-Insecure Direct Object Reference 
-Missing Functional Level Access Control 
-Cross Site Request Forgery (CSRF)
-Cryptography 
-Unvalidated Redirect & Forwards
-Server Side Template Injection
++ SQL Injection – Error Based 
++ SQL Injection – Blind
++ OS Command Injection
++ XPATH Injection 
++ Unrestricted File Upload
++ Reflected Cross Site Scripting 
++ Stored Cross Site Scripting 
++ DOM Based Cross Site Scripting 
++ Server Side Request Forgery (Cross Site Port Attacks) 
++ File Inclusion 
++ Session Issues 
++ Insecure Direct Object Reference 
++ Missing Functional Level Access Control 
++ Cross Site Request Forgery (CSRF)
++ Cryptography 
++ Unvalidated Redirect & Forwards
++ Server Side Template Injection
 
 Good Luck and Happy Hacking!
 
@@ -41,27 +41,17 @@ Copy the xvwa folder in your web directory. Make sure the directory name remains
 
 Make necessary changes in xvwa/config.php for database connection. Example below: 
 
-<code>
-$XVWA_WEBROOT = ''; 
-
-$host = "localhost"; 
-
-$dbname = 'xvwa'; 
-
-$user = 'root'; 
-
-$pass = 'root';
-</code>
+<code>$XVWA_WEBROOT = ''; </code>
+<code>$host = "localhost"; </code>
+<code>$dbname = 'xvwa'; </code>
+<code>$user = 'root'; </code>
+<code>$pass = 'root';</code>
 
 Make following changes in PHP configuration file
 
-<code>
-file_uploads = on 
-
-allow_url_fopen = on
-
-allow_url_include = on
-</code>
+<code>file_uploads = on </code>
+<code>allow_url_fopen = on</code>
+<code>allow_url_include = on</code>
 
 
 Access the application on : http://localhost/xvwa/
@@ -70,13 +60,9 @@ Setup the database and table by accessing http://localhost/xvwa/setup/
 
 The login details
 
-<code>
-admin:admin
-
-xvwa:xvwa
-
-user:vulnerable
-</code>
+<code>admin:admin</code>
+<code>xvwa:xvwa</code>
+<code>user:vulnerable</code>
 
 About 
 =========================================
