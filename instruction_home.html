@@ -1,0 +1,53 @@
+ <div class="thumbnail">
+    <!--
+                    <img class="img-responsive" src="http://placehold.it/800x300" alt="">
+                -->
+                <div class="caption-full">
+                    <h4><a href="#">Xtreme Vulnerable Web Application (XVWA) - Instruction</a></h4>
+
+                    <p align="justify">
+                       XVWA is hustle free to setup. You can set this up on windows, linux or Mac. Following are the basic steps you should be doing on your Apache-PHP-MYSQL environment to get this working.  Let that be WAMP, XAMP or anything you prefer to use.  
+                    </p>
+                    <p align="justify">
+                        Copy the xvwa folder in your web directory. Make sure the directory name remains xvwa itself. Make necessary changes in xvwa/config.php for database connection. Example below: <br><br>
+                        <code>
+                            $XVWA_WEBROOT = ''; <br>
+                            $host = "localhost"; <br>
+                            $dbname = 'xvwa'; <br> 
+                            $user = 'root'; <br> 
+                            $pass = 'root'; 
+                        </code><br><br>
+                        Make following changes in PHP configuration file. <br><br>
+                        <code>
+                            file_uploads = on  <br>
+                            allow_url_fopen = on <br>
+                            allow_url_include = on 
+                        </code>    
+                    </p>
+                    <p align="justify">
+                        Access the application on : http://localhost/xvwa/<br>
+                        Setup the database and table by accessing http://localhost/xvwa/setup/ <br>
+                    </p>
+                    <p align="justify">
+                        The login details <br><br>
+                        <code>
+                        admin:admin <br>
+                        xvwa:xvwa <br>
+                        user:vulnerable 
+                    </code>
+                    </p>
+
+                    
+
+                    </div>
+
+                </div>
+
+                <div class="well">
+                    <p>
+                        <strong>Disclaimer</strong><br>
+                        Do not host this application on live or production environment. XVWA is totally vulnerable application and giving online/live access of this application could lead to complete compromise of your system. We are not responsible for any such bad incidents. Stay safe ! 
+                    </p>
+                    <hr>
+
+                </div>

@@ -1,0 +1,62 @@
+<Coffees>
+  <Coffee ID="1">
+    <ID>1</ID>
+    <Name>Affogato</Name>
+    <Desc>An affogato (Italian, "drowned") is a coffee-based beverage. It usually takes the form of a scoop of vanilla gelato or ice cream topped with a shot of hot espresso. Some variations also include a shot of Amaretto or other liqueur.</Desc>
+    <Price>$4.69</Price>
+  </Coffee>
+  <Coffee ID="2">
+    <ID>2</ID>
+    <Name>Americano</Name>
+    <Desc>An Americano is an espresso-based drink designed to resemble coffee brewed in a drip filter, considered popular in the United States of America. This drink consists of a single or double-shot of espresso combined with up to four or five ounces of hot water in a two-demitasse cup.</Desc>
+    <Price>$5.00</Price>
+  </Coffee>
+  <Coffee ID="3">
+    <ID>3</ID>
+    <Name>Bicerin</Name>
+    <Desc>Bicerin is a traditional warm coffee concoction native to Turin, Italy, made of espresso, drinking chocolate and whole milk served layered in a small rounded glass. The word bicerin is Piedmontese for “small glass”. The beverage has been known since the 18th-century and was famously praised by Alexandre Dumas in 1852.</Desc>
+    <Price>$8.90</Price>
+  </Coffee>
+  <Coffee ID="4">
+    <ID>4</ID>
+    <Name>Café Bombón</Name>
+    <Desc>Cafe Bombon was made popular in Valencia, Spain, and spread gradually to the rest of the country. It might have been re-created and modified to suit European tastebuds as in many parts of Asia such as Malaysia, Thailand and Singapore the same recipe for coffee which is called "Kopi Susu Panas" (Malaysia) or "Kafe Ron" (Thailand) has already been around for decades and is very popular in "mamak" stalls or "kopitiams" in Malaysia.</Desc>
+    <Price>$7.08</Price>
+  </Coffee>
+  <Coffee ID="5">
+    <ID>5</ID>
+    <Name>Café au lait</Name>
+    <Desc>Café au lait is a French coffee drink. In Europe, "café au lait" stems from the same continental tradition as "caffè latte" in Italy, "café con leche" in Spain, "kawa biała" ("white coffee") in Poland, "Milchkaffee" in Germany, "Grosser Brauner" in Austria, "koffie verkeerd" in Netherlands, and "café com leite" in Portugal, simply "coffee with milk".</Desc>
+    <Price>$10.15</Price>
+  </Coffee>
+  <Coffee ID="6">
+    <ID>6</ID>
+    <Name>Caffé corretto</Name>
+    <Desc>Caffè corretto is an Italian beverage that consists of a shot of espresso with a shot of liquor, usually grappa, and sometimes sambuca or brandy. It is also known (outside of Italy) as an "espresso corretto". It is ordered as "un caffè corretto alla grappa," "[…] corretto alla sambuca," or "[…] corretto al cognac," depending on the desired liquor.</Desc>
+    <Price>$6.01</Price>
+  </Coffee>
+  <Coffee ID="7">
+    <ID>8</ID>
+    <Name>Caffé latte</Name>
+    <Desc>In Italy, latte means milk. What in English-speaking countries is now called a latte is shorthand for "caffelatte" or "caffellatte" ("caffè e latte"). The Italian form means "coffee and milk", similar to the French café au lait, the Spanish café con leche and the Portuguese café com leite. Other drinks commonly found in shops serving caffè lattes are cappuccinos and espressos. Ordering a "latte" in Italy will get the customer a glass of hot or cold milk. Caffè latte is a coffee-based drink made primarily from espresso and steamed milk. It consists of one-third espresso, two-thirds heated milk and about 1cm of foam. Depending on the skill of the barista, the foam can be poured in such a way to create a picture. Common pictures that appear in lattes are love hearts and ferns. Latte art is an interesting topic in itself.</Desc>
+    <Price>$6.04</Price>
+  </Coffee>
+  <Coffee ID="8">
+    <ID>8</ID>
+    <Name>Café mélange</Name>
+    <Desc>Café mélange is a black coffee mixed (french "mélange") or covered with whipped cream, very popular in Austria, Switzerland and the Netherlands.</Desc>
+    <Price>$3.06</Price>
+  </Coffee>
+  <Coffee ID="9">
+    <ID>9</ID>
+    <Name>Cafe mocha</Name>
+    <Desc>Caffè Mocha or café mocha, is an American invention and a variant of a caffe latte, inspired by the Turin coffee beverage Bicerin. The term "caffe mocha" is not used in Italy nor in France, where it is referred to as a "mocha latte". Like a caffe latte, it is typically one third espresso and two thirds steamed milk, but a portion of chocolate is added, typically in the form of sweet cocoa powder, although many varieties use chocolate syrup. Mochas can contain dark or milk chocolate.</Desc>
+    <Price>$4.05</Price>
+  </Coffee>
+  <Coffee ID="10">
+    <ID>10</ID>
+    <Name>Cappuccino</Name>
+    <Desc>A cappuccino is a coffee-based drink made primarily from espresso and milk. It consists of one-third espresso, one-third third heated milk and one-third milk foam and is generally served in a 6 to 8-ounce cup. The cappuccino is considered one of the original espresso drinks representative of Italian espresso cuisine and eventually Italian-American espresso cuisine.</Desc>
+    <Price>$3.06</Price>
+  </Coffee>
+</Coffees>
