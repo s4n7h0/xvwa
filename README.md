@@ -62,6 +62,8 @@ allow_url_fopen = on
 
 allow_url_include = on
 </code>
+
+
 Access the application on : http://localhost/xvwa/
 
 Setup the database and table by accessing http://localhost/xvwa/setup/
