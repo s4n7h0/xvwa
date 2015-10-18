@@ -39,7 +39,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0
 
 Instruction 
 =========================================
-XVWA is hustle free to setup. You can set this up on windows, linux or Mac. Following are the basic steps you should be doing on your Apache-PHP-MYSQL environment to get this working.  Let that be WAMP, XAMP or anything you prefer to use. 
+XVWA is hassle-free to setup. You can set this up on windows, linux or Mac. Following are the basic steps you should be doing on your Apache-PHP-MYSQL environment to get this working.  Let that be WAMP, XAMP or anything you prefer to use. 
 
 Copy the xvwa folder in your web directory. Make sure the directory name remains xvwa itself. 
 
