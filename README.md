@@ -47,7 +47,7 @@ $host = "localhost"; <br />
 $dbname = 'xvwa'; <br />
 $user = 'root'; <br />
 $pass = 'root'; <br />
-<code>
+</code>
 
 Make following changes in PHP configuration file
 
