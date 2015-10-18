@@ -41,11 +41,13 @@ Copy the xvwa folder in your web directory. Make sure the directory name remains
 
 Make necessary changes in xvwa/config.php for database connection. Example below: 
 
+<code>
 $XVWA_WEBROOT = '';
 $host = "localhost";
 $dbname = 'xvwa';
 $user = 'root';
 $pass = 'root'; 
+<code>
 
 Make following changes in PHP configuration file
 
