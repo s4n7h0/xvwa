@@ -42,28 +42,31 @@ Copy the xvwa folder in your web directory. Make sure the directory name remains
 Make necessary changes in xvwa/config.php for database connection. Example below: 
 
 <code>
-> $XVWA_WEBROOT = ''; 
-> $host = "localhost"; 
-> $dbname = 'xvwa'; 
-> $user = 'root'; 
-> $pass = 'root';
+$XVWA_WEBROOT = ''; 
+$host = "localhost"; 
+$dbname = 'xvwa'; 
+$user = 'root'; 
+$pass = 'root';
 </code>
 
 Make following changes in PHP configuration file
 
+<code>
 file_uploads = on 
 allow_url_fopen = on
 allow_url_include = on
-
+</code>
 Access the application on : http://localhost/xvwa/
 
 Setup the database and table by accessing http://localhost/xvwa/setup/
 
 The login details
 
+<code>
 admin:admin
 xvwa:xvwa
 user:vulnerable
+</code>
 
 About 
 =========================================
