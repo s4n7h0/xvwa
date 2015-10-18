@@ -43,9 +43,13 @@ Make necessary changes in xvwa/config.php for database connection. Example below
 
 <code>
 $XVWA_WEBROOT = ''; 
+
 $host = "localhost"; 
+
 $dbname = 'xvwa'; 
+
 $user = 'root'; 
+
 $pass = 'root';
 </code>
 
@@ -53,7 +57,9 @@ Make following changes in PHP configuration file
 
 <code>
 file_uploads = on 
+
 allow_url_fopen = on
+
 allow_url_include = on
 </code>
 Access the application on : http://localhost/xvwa/
@@ -64,7 +70,9 @@ The login details
 
 <code>
 admin:admin
+
 xvwa:xvwa
+
 user:vulnerable
 </code>
 
