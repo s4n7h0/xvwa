@@ -57,8 +57,6 @@ XPTH injections are fairly similar to SQL injection with a difference that it us
     ?>
 
     <hr>
-    <div class="text-right">
-        <a class="btn btn-success">View Code</a>
-    </div>
+    
 </div>
 <?php include_once('../../about.html'); ?>

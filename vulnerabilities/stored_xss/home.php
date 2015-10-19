@@ -77,12 +77,5 @@ Stored Cross Site Scripting attacks happen when the application doesn’t valida
 
         
 
-
-
-
-
-    <div class="text-right">
-        <a class="btn btn-success">View Code</a>
-    </div>
 </div>
 <?php include_once('../../about.html'); ?>
