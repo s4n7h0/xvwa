@@ -58,13 +58,12 @@
     <?php include("footer.html") ?>
     <!-- /.container -->
 
+    <?php include_once('about.html'); ?>
+
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-
 </body>
-
 </html>
-<?php include_once('about.html'); ?>
