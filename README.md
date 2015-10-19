@@ -34,8 +34,9 @@ Do not host this application on live or production environment. XVWA is totally 
 
 Copyright
 =========================================
-This work is licensed under the Creative Commons Attribution 4.0 International License. 
-To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/
+This work is licensed under GNU GENERAL PUBLIC LICENSE Version 3
+To view a copy of this license, visit http://www.gnu.org/licenses/gpl-3.0.txt
+
 
 Instruction 
 =========================================
