@@ -16,6 +16,6 @@
 	if(!empty($ActiveUser)){
 		$_SESSION['user'] = $ActiveUser;
 	}
-	header("Location: http://172.16.100.129/xvwa/");
+	header("Location: /xvwa/");
 	
 ?>
