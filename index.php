@@ -63,8 +63,7 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-
+<?php include_once('about.html'); ?>
 </body>
 
 </html>
-<?php include_once('about.html'); ?>
