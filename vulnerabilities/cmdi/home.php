@@ -31,7 +31,7 @@
     </div>
             <?php
                 $target = $_REQUEST[ 'target' ];
-                if($target){
+                if($target && filter_var($target, FILTER_VALIDATE_IP)){
                     if (stristr(php_uname('s'), 'Windows NT')) { 
             
                     $cmd = shell_exec( 'ping  ' . $target );
