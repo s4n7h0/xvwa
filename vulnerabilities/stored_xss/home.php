@@ -62,9 +62,9 @@ Stored Cross Site Scripting attacks happen when the application doesn’t valida
                 echo "<div class=\"row\">";
                 echo "<div class=\"col-md-12\">";
                 echo "<span class=\"glyphicon glyphicon-star\"></span> &nbsp;";
-                    echo ucfirst($usr);
-                echo "<span class=\"pull-right\">",$dt."</span>";
-                echo "<p>".$cmnt."</p>";
+                    echo ucfirst(htmlentities($usr));
+                echo "<span class=\"pull-right\">".$dt."</span>";
+                echo "<p>".htmlentities($cmnt)."</p>";
                 echo "</div>";
                 echo "</div><hr>";
 
