@@ -35,7 +35,7 @@ Do not host this application on live or production environment. XVWA is totally 
 Copyright
 =========================================
 This work is licensed under GNU GENERAL PUBLIC LICENSE Version 3
-To view a copy of this license, visit http://www.gnu.org/licenses/gpl-3.0.txt
+To view a copy of this license, visit [here](http://www.gnu.org/licenses/gpl-3.0.txt)
 
 
 Instruction 
@@ -75,6 +75,6 @@ XVWA is intentionally designed with many security flaws and enough technical gro
 
 Authors:
 
-@s4n7h0 https://twitter.com/s4n7h0 
+[@s4n7h0](https://twitter.com/s4n7h0)
 
-@samanL33T https://twitter.com/samanl33t 
+[@samanL33T](https://twitter.com/samanl33t)
