@@ -6,7 +6,7 @@ XVWA is a badly coded web application written in PHP/MySQL that helps security e
 ![Image of XVWA Home Page]
 (https://pbs.twimg.com/media/CRm5t-pUAAA6SAf.png:large) 
 
-XVWA is designed to understand following security issues. 
+XVWA is designed to understand following security issues: 
 
 + SQL Injection – Error Based 
 + SQL Injection – Blind
@@ -38,7 +38,7 @@ This work is licensed under GNU GENERAL PUBLIC LICENSE Version 3
 To view a copy of this license, visit http://www.gnu.org/licenses/gpl-3.0.txt
 
 
-Instruction 
+Installation instructions 
 =========================================
 XVWA is hassle-free to setup. You can set this up on windows, linux or Mac. Following are the basic steps you should be doing on your Apache-PHP-MYSQL environment to get this working.  Let that be WAMP, XAMP or anything you prefer to use. 
 
@@ -63,11 +63,13 @@ Access the application on : http://localhost/xvwa/
 
 Setup the database and table by accessing http://localhost/xvwa/setup/
 
-The login details
+The login details:
 
 <code>admin:admin</code>
 <code>xvwa:xvwa</code>
 <code>user:vulnerable</code>
+
+**Your web browser might block some of the client side attack examples - open the browsers developer console for more information.**
 
 About 
 =========================================
