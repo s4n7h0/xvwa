@@ -37,8 +37,8 @@ Stored Cross Site Scripting attacks happen when the application doesn’t valida
         include_once('../../config.php');
         $conn=new mysqli($hostname,$user,$pass,$dbname);
 
-        $user=$_POST['name'];
-        $comment=$_POST['msg'];
+        $user = isset($_POST['name']) ? $_POST['name'] : '';
+        $comment = isset($_POST['msg']) ? $_POST['msg'] : '';
         if($comment){
             if(!$user){
                 $user = "Anonymous";
