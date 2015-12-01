@@ -59,9 +59,9 @@ Make following changes in PHP configuration file
 <code>allow_url_include = on</code>
 
 
-Access the application on : http://localhost/xvwa/
+XVWA will be accessible at http://localhost/xvwa/
 
-Setup the database and table by accessing http://localhost/xvwa/setup/
+Setup or reset the database and table here http://localhost/xvwa/setup/
 
 The login details
 
