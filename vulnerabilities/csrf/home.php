@@ -26,27 +26,30 @@
                     </div> 
                 </form>
                 <?php
-                if($_session['user']){
-                    $password = $_GET['passwd'];
-                    $confirm = $_GET['confirm'];
-                    if(!empty($submit)){
+                $current_user = isset($_SESSION['user']) ? $_SESSION['user'] : '' ;
+                $password = isset($_GET['passwd']) ? $_GET['passwd'] : '' ;
+                $confirm = isset($_GET['confirm']) ? $_GET['confirm'] : '' ;
+                include('../../config.php');
+                if($current_user){
+                    if(isset($_GET['submit'])){
                         if(empty($password) && empty($password)){
                             echo "Passwords can not be blank !! Try Again ";
                         }else if($password != $confirm){
-                            echo "Passwords dont match !! Try Again";
+                            echo "Passwords don't match !! Try Again";
                         }else{
-                            echo ucfirst(($_SESSION['user']));
-                            //include(dirname(__FILE__).DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'xvwa/config.php');
-                            $conn = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
-                            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-                            $stmt = $conn->prepare("UPDATE users set password=:pass where username=:user");
+                            $stmt = $conn1->prepare("UPDATE users set password=:pass where username=:user");
                             $stmt->bindParam(':pass', md5($password));
-                            $stmt->bindParam(':user', $_SESSION['user']);
-                            $stmt->execute();
-                            echo $stmt->rowCount() . " records UPDATED successfully";
+                            $stmt->bindParam(':user', $current_user);
+                            $stmt->execute(); 
+                            if($stmt->rowCount() > 0){
+                                echo "<b>Password Changed successfully<br></b>";
+                            }else{
+                                echo "<b>Invalid user<br></b>";
+                            }
                         }
                     }
+                }else{
+                    echo "<b> You are not logged in. </b>";
                 }
                 ?>
             </p>

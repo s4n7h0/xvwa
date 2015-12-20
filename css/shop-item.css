@@ -8,10 +8,6 @@ body {
     padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
 
-.thumbnail img {
-    width: 100%;
-}
-
 .ratings {
     padding-right: 10px;
     padding-left: 10px;

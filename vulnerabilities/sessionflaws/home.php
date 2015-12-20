@@ -23,7 +23,7 @@
                 echo "Welcome ". ucfirst($_SESSION['user']); 
                 echo "<br><br><a href='../../logout.php'>Logout</a>";
             }else{
-                echo "You are not a logged in. <br>Please login to the application and try again.";
+                echo "You are not a logged in. <br>Please login and try again.";
             }
         ?>
         </strong>

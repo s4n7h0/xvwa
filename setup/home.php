@@ -20,13 +20,13 @@
 </div>
 <?php
 //include(dirname(__FILE__).DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'/xvwa/config.php');
-
+include('../config.php');
 function cleanup($conn,$XVWA_WEBROOT){
     // clean the database
     $tables = array('comments','caffaine','users');
     for($i=0;$i<count($tables);$i++){
         $sql = 'DROP TABLE '. $tables[$i].';';
-        $sqlexec = mysql_query($sql,$conn);
+        $sqlexec = mysql_query($sql);
     }
     // clean extra files
     $files = glob($_SERVER['DOCUMENT_ROOT'].'/'.$XVWA_WEBROOT.'/xvwa/img/uploads/*'); 
@@ -46,14 +46,12 @@ $submit = isset($_GET['action']) ? $_GET['action'] : '';
         die("<li class=\"cross\">Connection Failed. Check the configuration file.".mysql_error()."</li>");
      }else{
         //connection successfull.
-        $dbselect=mysql_select_db($dbname,$conn); 
-        if($dbselect){
             cleanup($conn,$XVWA_WEBROOT);
             echo "<li class=\"tick\">Connected to database sucessfully.</li>";   
             // creating comment tables
-            $table_comment=mysql_query('CREATE TABLE comments(id int not null primary key auto_increment,user varchar(30),comment varchar(100),date varchar(30))',$conn);
+            $table_comment=mysql_query('CREATE TABLE comments(id int not null primary key auto_increment,user varchar(30),comment varchar(100),date varchar(30))');
             if($table_comment){
-                $insert_comment=mysql_query('INSERT INTO comments (id,user,comment,date) VALUES (\'1\', \'admin\', \'Keep posting your comments here \', \'10 Aug 2015\');',$conn);
+                $insert_comment=mysql_query('INSERT INTO comments (id,user,comment,date) VALUES (\'1\', \'admin\', \'Keep posting your comments here \', \'10 Aug 2015\');');
                 if($insert_comment){
                     echo "<li class=\"tick\">Table comments sucessfully.</li>"; 
                 }else{
@@ -64,7 +62,7 @@ $submit = isset($_GET['action']) ? $_GET['action'] : '';
             }
 
             //creating product_caffe table
-            $table_product=mysql_query('CREATE TABLE caffaine(itemid int not null primary key auto_increment, itemcode varchar(15),itemdisplay varchar(500),itemname varchar(50),itemdesc varchar(1000),categ varchar(200),price varchar(20))',$conn);
+            $table_product=mysql_query('CREATE TABLE caffaine(itemid int not null primary key auto_increment, itemcode varchar(15),itemdisplay varchar(500),itemname varchar(50),itemdesc varchar(1000),categ varchar(200),price varchar(20))');
             if($table_product){
                 $itemcode = array('XVWA0987','XVWA3876','XVWA4589','XVWA7619','XVWA5642','XVWA7569','XVWA3671','XVWA1672','XVWA4276','XVWA9680');
                 $itemname = array('Affogato','Americano','Bicerin','Café Bombón','Café au lait','Caffé corretto','Caffé latte','Café mélange','Cafe mocha','Cappuccino');
@@ -74,7 +72,7 @@ $submit = isset($_GET['action']) ? $_GET['action'] : '';
                 for($i = 0; $i<count($itemcode); $i++){
                     $pic = $XVWA_WEBROOT.'/xvwa/img/'.$itemcode[$i].'.png';
                     $sql = 'INSERT into caffaine(itemcode,itemdisplay,itemname,itemdesc,categ,price) VALUES (\''.$itemcode[$i].'\',\''.$pic.'\',\''.$itemname[$i].'\',\''.$itemdesc[$i].'\',\''.$categ[$i].'\',\''.$itemprice[$i].'\');';
-                    $insert_product=mysql_query($sql,$conn);
+                    $insert_product=mysql_query($sql);
                 }
                 if($insert_product){
                     echo "<li class=\"tick\">Table products created sucessfully.</li>"; 
@@ -85,13 +83,13 @@ $submit = isset($_GET['action']) ? $_GET['action'] : '';
                 echo "<li class=\"cross\">Failed to use/select database. Check the configuration file.".mysql_error()."</li>";
             }
             //creating user table
-            $table_user=mysql_query("CREATE table users(uid int not null primary key auto_increment, username varchar(20),password varchar(50))",$conn);
+            $table_user=mysql_query("CREATE table users(uid int not null primary key auto_increment, username varchar(20),password varchar(50))");
             if($table_user){
                 $uname = array('admin','xvwa','user');
                 $pwd = array('21232f297a57a5a743894a0e4a801fc3','570992ec4b5ad7a313f5dc8fd0825395','25890deab1075e916c06b9e1efc2e25f');
                 for($i=0;$i<count($uname);$i++){
                     $sql = "INSERT INTO users (username,password) values ('".$uname[$i]."','".$pwd[$i]."')";
-                    $insert_user=mysql_query($sql,$conn);
+                    $insert_user=mysql_query($sql);
                 }
                 if($insert_user){
                     echo "<li class=\"tick\">Table users created sucessfully.</li>"; 
@@ -102,7 +100,7 @@ $submit = isset($_GET['action']) ? $_GET['action'] : '';
                 echo "<li class=\"cross\">Failed to use/select database. Check the configuration file.".mysql_error()."</li>";   
             }
 
-        }
+        
        
         echo "<br><li class=\"tick\">Setup finished</li>";
 

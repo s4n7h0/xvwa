@@ -33,9 +33,8 @@ Stored Cross Site Scripting attacks happen when the application doesn’t valida
         </p>
     </div>
         <hr>
-        <?php
+        <?php 
         include_once('../../config.php');
-        $conn=new mysqli($hostname,$user,$pass,$dbname);
 
         $user = isset($_POST['name']) ? $_POST['name'] : '';
         $comment = isset($_POST['msg']) ? $_POST['msg'] : '';
@@ -44,31 +43,26 @@ Stored Cross Site Scripting attacks happen when the application doesn’t valida
                 $user = "Anonymous";
             }
             $today = date("d M Y");
-            
-            $stmt = $conn->prepare("insert into comments (user,comment,date) values(?,?,?)");
-            $stmt->bind_param("sss",$user,$comment,$today);
+            $sql="insert into comments (user,comment,date) values(:user,:comment,:date)";
+            $stmt = $conn1->prepare($sql);
+            $stmt->bindParam(":user",$user);
+            $stmt->bindParam(":comment",$comment);
+            $stmt->bindParam(":date",$today);
             $stmt->execute();
-
-
 
         }
 
-        $stmt = $conn->prepare("select user,comment,date from comments"); 
-
-        if ($stmt->execute()) {
-            $stmt->store_result();
-            $stmt->bind_result($usr,$cmnt,$dt);
-            while ($stmt->fetch()) {
-                echo "<div class=\"row\">";
+        $stmt = $conn1->prepare("select user,comment,date from comments"); 
+        $stmt->execute();
+        while($rows = $stmt->fetch(PDO::FETCH_NUM)){
+            echo "<div class=\"row\">";
                 echo "<div class=\"col-md-12\">";
                 echo "<span class=\"glyphicon glyphicon-star\"></span> &nbsp;";
-                    echo ucfirst($usr);
-                echo "<span class=\"pull-right\">",$dt."</span>";
-                echo "<p>".$cmnt."</p>";
+                    echo ucfirst($rows[0]);
+                echo "<span class=\"pull-right\">".$rows[2]."</span>";
+                echo "<p>".$rows[1]."</p>";
                 echo "</div>";
                 echo "</div><hr>";
-
-            }
         } 
 
         ?>

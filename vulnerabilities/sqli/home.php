@@ -27,13 +27,12 @@
                             <option value="">Select Item Code</option>
                             <?php
                             include('../../config.php');
+                            error_reporting(E_ALL);
                             if(!$conn){
                                 echo "Error in connecting to database";
-
                             }else{
-                                $dbselect=mysql_select_db($dbname,$conn);
                                 $sql = 'select itemid from caffaine';
-                                $result = mysql_query($sql,$conn);
+                                $result = mysql_query($sql);
                                 while($rows = mysql_fetch_array($result)){
                                     echo "<option value=\"".$rows['itemid']."\">".$rows['itemid']."</option>";
                                 }

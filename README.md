@@ -4,7 +4,7 @@ XVWA is a badly coded web application written in PHP/MySQL that helps security e
 
 
 ![Image of XVWA Home Page]
-(https://pbs.twimg.com/media/CRm5t-pUAAA6SAf.png:large) 
+(https://pbs.twimg.com/media/CWsFq1SVEAACsCh.png:large) 
 
 XVWA is designed to understand following security issues. 
 
@@ -12,6 +12,8 @@ XVWA is designed to understand following security issues.
 + SQL Injection – Blind
 + OS Command Injection
 + XPATH Injection 
++ Formula Injection
++ PHP Object Injection 
 + Unrestricted File Upload
 + Reflected Cross Site Scripting 
 + Stored Cross Site Scripting 

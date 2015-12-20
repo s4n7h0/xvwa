@@ -24,16 +24,14 @@
                         <label></label>
                         <select class="form-control" name="item">
                             <option value="">Select Item Code</option>
-                            <?php
-                            if(!$conn){
-                                echo "Error in connecting to database";
-
-                            }else{
-                                $dbselect=mysql_select_db($dbname,$conn);
-                                $sql = 'select itemid from caffaine LIMIT 5';
-                                $result = mysql_query($sql,$conn);
-                                while($rows = mysql_fetch_array($result)){
-                                    echo "<option value=\"".$rows['itemid']."\">".$rows['itemid']."</option>";
+                            <?php 
+                            include('../../config.php');
+                            if($conn1){
+                                $sql= 'select itemid from caffaine LIMIT 5';
+                                $stmt = $conn1->prepare($sql);
+                                $stmt->execute();
+                                while($rows = $stmt->fetch(PDO::FETCH_NUM)){
+                                    echo "<option value=\"".$rows[0]."\">".$rows[0]."</option>";
                                 }
                             } 
 
@@ -43,10 +41,8 @@
                             echo "</div> </form> </p>";
                             echo "</div>";
                             $item = isset($_GET['item']) ? $_GET['item'] : '';
-                            $conn = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
-                            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                             $sql = "select itemcode,itemname,itemdisplay,itemdesc,categ,price from caffaine where itemid = :itemid";
-                            $stmt = $conn->prepare($sql);
+                            $stmt = $conn1->prepare($sql);
                             $stmt->bindParam(':itemid',$item);
                             $stmt->execute();
                             echo "<table>";

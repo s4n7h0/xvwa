@@ -1,4 +1,4 @@
-
+<link rel="icon" type="image/png" href="/xvwa/img/xvwa-logo-1.png" />
 <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">

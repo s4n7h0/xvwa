@@ -66,14 +66,12 @@
               //uploading file
                 $path = $_SERVER['DOCUMENT_ROOT'].'/xvwa/img/uploads/';
                 $path = $path . basename( $_FILES['image']['name']); 
-                $rpath = '/xvwa/img/uploads/'.basename( $_FILES['image']['name']); 
+                $rpath = $_SERVER['DOCUMENT_ROOT'].'/xvwa/img/uploads/'.basename( $_FILES['image']['name']); 
                 if(!move_uploaded_file($_FILES['image']['tmp_name'], $path)) {
                   echo "There was an error uploading the file, please try again!";
                 }else{
-                  $conn = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
-                  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-                  $stmt = $conn->prepare("INSERT INTO caffaine (itemcode, itemname, itemdisplay, itemdesc, categ, price) VALUES (:itemcode, :itemname, :itemdisplay, :itemdesc, :categ, :price)");
+                  
+                  $stmt = $conn1->prepare("INSERT INTO caffaine (itemcode, itemname, itemdisplay, itemdesc, categ, price) VALUES (:itemcode, :itemname, :itemdisplay, :itemdesc, :categ, :price)");
                   $stmt->bindParam(':itemcode', $itemcode);
                   $stmt->bindParam(':itemname', $itemname);
                   $stmt->bindParam(':itemdisplay', $rpath);
@@ -82,7 +80,7 @@
                   $stmt->bindParam(':price', $price);
                   $stmt->execute();
                   $sql = "select itemname,itemdisplay,itemdesc,categ,price from caffaine where itemcode = :itemcode";
-                  $stmt = $conn->prepare($sql);
+                  $stmt = $conn1->prepare($sql);
                   $stmt->bindParam(':itemcode',$itemcode);
                   $stmt->execute();
                   echo "<h4>Item Uploaded Successfully !!</h4><br>";

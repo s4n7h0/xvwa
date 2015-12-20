@@ -19,17 +19,17 @@ Web application uses templates to make the web pages look more dynamic. Template
 <div class="well">
     <div class="col-lg-6"> 
         <p>
-        Hint: <br>
+        Hints: <br>
         <ul>
         <li>Template Engine used is TWIG </li>
-        <li>Loader function used = "Twig_Loader_String </li>
+        <li>Loader function used = "Twig_Loader_String" </li>
         </ul>
-        </p><br>
-        <p>Please Enter your Name.  
+        </p>
+        <p>
             <form method='get' action=''>
                 <div class="form-group"> 
                     <label></label>
-                    <input class="form-control" width="50%" placeholder="Your Name" name="name"></input> <br>
+                    <input class="form-control" width="50%" placeholder="Enter Your Name" name="name"></input> <br>
                     <div align="right"> <button class="btn btn-default" type="submit" name='submit'>Submit Button</button></div>
                </div> 
             </form>
