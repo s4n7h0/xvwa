@@ -29,7 +29,7 @@ function cleanup($conn,$XVWA_WEBROOT){
         $sqlexec = mysql_query($sql);
     }
     // clean extra files
-    $files = glob($_SERVER['DOCUMENT_ROOT'].'/'.$XVWA_WEBROOT.'/xvwa/img/uploads/*'); 
+    $files = glob('../img/uploads/*'); 
     foreach($files as $file){ 
         if(is_file($file)){
             unlink($file); 
@@ -70,7 +70,7 @@ $submit = isset($_GET['action']) ? $_GET['action'] : '';
                 $categ = array('Espresso,Vanilla Gelato','Espresso','Espresso, Chocolate, Milk','Espresso, Sweetened Milk','Coffee, Milk','Espresso, Liquor Shot','Espresso, Milk','White Creame','Latte, Chocolate','Espresso, Milk');
                 $itemprice = array(4.69,5.00,8.90,7.08,10.15,6.01,6.04,3.06,4.05,3.06);
                 for($i = 0; $i<count($itemcode); $i++){
-                    $pic = $XVWA_WEBROOT.'/xvwa/img/'.$itemcode[$i].'.png';
+		    $pic = '/xvwa/img/'.$itemcode[$i].'.png';
                     $sql = 'INSERT into caffaine(itemcode,itemdisplay,itemname,itemdesc,categ,price) VALUES (\''.$itemcode[$i].'\',\''.$pic.'\',\''.$itemname[$i].'\',\''.$itemdesc[$i].'\',\''.$categ[$i].'\',\''.$itemprice[$i].'\');';
                     $insert_product=mysql_query($sql);
                 }

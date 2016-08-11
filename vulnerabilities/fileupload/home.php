@@ -66,9 +66,9 @@
               //uploading file
                 $path = $_SERVER['DOCUMENT_ROOT'].'/xvwa/img/uploads/';
                 $path = $path . basename( $_FILES['image']['name']); 
-                $rpath = $_SERVER['DOCUMENT_ROOT'].'/xvwa/img/uploads/'.basename( $_FILES['image']['name']); 
-                if(!move_uploaded_file($_FILES['image']['tmp_name'], $path)) {
-                  echo "There was an error uploading the file, please try again!";
+                $rpath = '/xvwa/img/uploads/'.basename( $_FILES['image']['name']);
+		if(!move_uploaded_file($_FILES['image']['tmp_name'], $path)) {
+                  echo "<h4><b><font color='red'>There was an error uploading the file, please try again!</font></b></h4>";
                 }else{
                   
                   $stmt = $conn1->prepare("INSERT INTO caffaine (itemcode, itemname, itemdisplay, itemdesc, categ, price) VALUES (:itemcode, :itemname, :itemdisplay, :itemdesc, :categ, :price)");
@@ -83,7 +83,7 @@
                   $stmt = $conn1->prepare($sql);
                   $stmt->bindParam(':itemcode',$itemcode);
                   $stmt->execute();
-                  echo "<h4>Item Uploaded Successfully !!</h4><br>";
+                  echo "<h4><b><font color='green'>Item Uploaded Successfully !!</font></b></h4><br>";
                   echo "<table>";
                   while($rows = $stmt->fetch(PDO::FETCH_NUM)){
                     echo "<tr><td><b>Code : </b>".htmlspecialchars($itemcode)."</td><td rowspan=5>&nbsp;&nbsp;</td><td rowspan=5 valign=\"top\" align=\"justify\"><b>Description : </b>".htmlspecialchars($rows[2])."</td></tr>";

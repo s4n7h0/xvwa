@@ -1,9 +1,9 @@
 <?php
-$XVWA_WEBROOT = '';
+$XVWA_WEBROOT = "/var/www/html";
 $host = "localhost";
 $dbname = 'xvwa';
-$user = 'root';
-$pass = '';
+$user = "root";
+$pass = "";
 $conn = mysql_connect($host,$user,$pass);
 $conn = mysql_select_db($dbname);
 $conn1 = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
