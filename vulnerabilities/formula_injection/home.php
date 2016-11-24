@@ -8,7 +8,11 @@
         <p align="justify">
             CSV Formula injection is also known as CSV Excel Macro Injection. This happens when the application does not validate the content of CSV file. Applications that allows to export/download data in CSV or excel format usually vulnerable to such attacks. </p>
             <p>Read more about CVS Formula Injection <br>
-                <strong><a target="_blank" href="https://www.owasp.org/index.php/CSV_Excel_Macro_Injection">https://www.owasp.org/index.php/CSV_Excel_Macro_Injection</a></p></strong>
+                <strong><a target="_blank" href="https://www.owasp.org/index.php/CSV_Excel_Macro_Injection">https://www.owasp.org/index.php/CSV_Excel_Macro_Injection</a></strong>
+            </p>
+            <p>
+             Hint: Find a way to create or update am item with your payload
+           </p>
 
     </div>
 

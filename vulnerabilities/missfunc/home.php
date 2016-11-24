@@ -66,7 +66,7 @@
                                 echo "</table>";
                             }else if($action=='delete'){
                                 $sql="delete from caffaine where itemid=:itemid";
-                                $stmt=$conn->prepare($sql);
+                                $stmt=$conn1->prepare($sql);
                                 $stmt->bindParam(':itemid',$item);
                                 $stmt->execute();
                                 if($stmt->rowCount()){
