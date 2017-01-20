@@ -18,13 +18,11 @@ jection">https://www.owasp.org/index.php/PHP_Object_Injection</a></p></strong>
                     <div class="text-left">
                         <label></label>
                     <div class="form-group" align="left"> 
-                        <a class="btn btn-primary" href='?r=a:2:{i:0;s:4:"XVWA";i:1;s:33:"Xtreme Vulnerable Web Application";}' type="submit">SUBMIT</a>
+                        <a class="btn btn-primary" href='?r=a:2:{i:0;s:4:"XVWA";i:1;s:33:"Xtreme Vulnerable Web Application";}' type="submit">CLICK HERE</a>
                     </div>
                         <?php 
-                            error_reporting(E_ALL);
                             class PHPObjectInjection{
                                 public $inject;
-
                                 function __construct(){
 
                                 }
@@ -35,7 +33,6 @@ jection">https://www.owasp.org/index.php/PHP_Object_Injection</a></p></strong>
                                     }
                                 }
                             }
-//?r=a:2:{i:0;s:4:"XVWA";i:1;s:33:"Xtreme Vulnerable Web Application";}
                             if(isset($_REQUEST['r'])){  
 
                                 $var1=unserialize($_REQUEST['r']);
@@ -45,7 +42,7 @@ jection">https://www.owasp.org/index.php/PHP_Object_Injection</a></p></strong>
                                     echo "<br/>".$var1[0]." - ".$var1[1];
                                 }
                             }else{
-                                echo "parameter is missing";
+                                echo ""; # nothing happens here
                             }
                         ?>
          </div>

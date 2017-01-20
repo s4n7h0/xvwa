@@ -25,15 +25,16 @@
                         <label></label>
                         <select class="form-control" name="item">
                             <option value="">Select Item Code</option>
-                            <?php
-                            include('../../config.php');
+                            <?php 
                             error_reporting(E_ALL);
-                            if(!$conn){
+                            ini_set('display_errors', 1);
+                            include('../../config.php');
+                            if($conn->connect_errno > 0){
                                 echo "Error in connecting to database";
                             }else{
                                 $sql = 'select itemid from caffaine';
-                                $result = mysql_query($sql);
-                                while($rows = mysql_fetch_array($result)){
+                                $result = $conn->query($sql);
+                                while($rows = $result->fetch_assoc()) {
                                     echo "<option value=\"".$rows['itemid']."\">".$rows['itemid']."</option>";
                                 }
                             } 
@@ -52,16 +53,16 @@
                                 echo "</ul>";
                             }else if($item){
                                 $sql = "select * from caffaine where itemid = ".$item;
-                                $result = mysql_query($sql) or die(mysql_error());
+                                $result = $conn->query($sql);
                                 $isSearch = true;
                             }else if($search){
                                 $sql = "SELECT * FROM caffaine WHERE itemname LIKE '%" . $search . "%' OR itemdesc LIKE '%" . $search . "%' OR categ LIKE '%" . $search . "%'";
-                                $result = mysql_query($sql) or die(mysql_error());
+                                $result = $conn->query($sql);
                                 $isSearch = true;
                             }
                             if($isSearch){
                                 echo "<table>";
-                                while($rows = mysql_fetch_array($result)){
+                                while($rows = $result->fetch_assoc()){
                                     echo "<tr><td><b>Item Code : </b>".$rows['itemcode']."</td><td rowspan=5>&nbsp;&nbsp;</td><td rowspan=5 valign=\"top\" align=\"justify\"><b>Description : </b>".$rows['itemdesc']."</td></tr>";
                                     echo "<tr><td><b>Item Name : </b>".$rows['itemname']."</td></tr>";
                                     echo "<td><img src='".$rows['itemdisplay']."' height=130 weight=20/></td>";

@@ -1,1 +1,1 @@
-file inclusions here 
+File inclusion is an attack that would allow an attacker to access unintended files on the server. This vulnerability exploits application’s functionality to include dynamic files. Two categories in this attack are Local File Inclusion (LFI) and Remote File Inclusion (RFI).
