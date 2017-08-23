@@ -82,9 +82,10 @@ I have written a small script to easily automates XVWA Setup in linux distributi
 ### Docker 
 I have also seen a multiple dockers published to setup XVWA. Our thanks to all of them. Any docker lovers can also checkout below work. https://github.com/tuxotron/xvwa_lamp_container 
 ### Live ISO 
-[@knoself](https://twitter.com/knoself) made a Ubuntu live ISO for xvwa [issue27](https://github.com/s4n7h0/xvwa/issues/27)
+[@knoself](https://twitter.com/knoself) made XVWA live ISO on minimal Ubuntu server 14.04.x [(issue27)](https://github.com/s4n7h0/xvwa/issues/27)
 https://mega.nz/#!4bJ2XRLT!zOa_IZaBz-doqVZz77Rs1tbhXuR8EVBLOHktBGp11Q8 
-```User = xvwa
+```
+User = xvwa
 Pass = toor
 ```
 
