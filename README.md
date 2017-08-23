@@ -30,19 +30,19 @@ XVWA is designed to understand following security issues.
 
 Good Luck and Happy Hacking!
 
-####Disclaimer 
+## Disclaimer 
 
 Do not host this application on live or production environment. XVWA is totally vulnerable application and giving online/live access of this application could lead to complete compromise of your system. We are not responsible for any such bad incidents. Stay safe ! 
 
-####Copyright
+## Copyright
 This work is licensed under GNU GENERAL PUBLIC LICENSE Version 3
 To view a copy of this license, visit http://www.gnu.org/licenses/gpl-3.0.txt
 
 
-##Instructions 
+## Instructions 
 XVWA is hassle-free to setup. You can set this up on windows, linux or Mac. Following are the basic steps you should be doing on your Apache-PHP-MYSQL environment to get this working.  Let that be WAMP, XAMP or anything you prefer to use. 
 
-#### Manual Installation Method
+## Manual Installation Method
 
 Copy the xvwa folder in your web directory. Make sure the directory name remains **xvwa** itself. Make necessary changes in xvwa/config.php for database connection. Example below: 
 
@@ -74,18 +74,23 @@ xvwa:xvwa
 user:vulnerable
 ```
 
-#### Automatic Installation Script
+## Automatic Installation Script
 I have written a small script to easily automates XVWA Setup in linux distributions. Run this with *root* to install the dependencies if not found in your linux environment
 >https://github.com/s4n7h0/Script-Bucket/blob/master/Bash/xvwa-setup.sh 
 
-#### Alternative Setup Environments
-> I have also seen a multiple dockers published to setup XVWA. Our thanks to all of them. Any docker lovers can also checkout below work. https://github.com/tuxotron/xvwa_lamp_container 
+## Alternative Setup Environments
+### Docker 
+I have also seen a multiple dockers published to setup XVWA. Our thanks to all of them. Any docker lovers can also checkout below work. https://github.com/tuxotron/xvwa_lamp_container 
+### Live ISO 
+[@knoself](https://twitter.com/knoself) made a Ubuntu live ISO for xvwa [issue27](https://github.com/s4n7h0/xvwa/issues/27)
+https://mega.nz/#!4bJ2XRLT!zOa_IZaBz-doqVZz77Rs1tbhXuR8EVBLOHktBGp11Q8 
+```User = xvwa
+Pass = toor
+```
 
-> [@knoself](https://twitter.com/knoself) made a live ISO for xvwa https://mega.nz/#!4bJ2XRLT!zOa_IZaBz-doqVZz77Rs1tbhXuR8EVBLOHktBGp11Q8 
-
-##About 
+## About 
 XVWA is intentionally designed with many security flaws and enough technical ground to upskill application security knowledge. This whole idea is to evangelize web application security issues. Do let us know your suggestions for improvement or any more vulnerability you would like to see in XVWA future releases. 
 
-######Authors:
+## Authors:
 - @s4n7h0 https://twitter.com/s4n7h0
 - @samanL33T https://twitter.com/samanl33t 
