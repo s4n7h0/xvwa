@@ -81,7 +81,7 @@ I have written a small script to easily automates XVWA Setup in linux distributi
 #### Alternative Setup Environments
 > I have also seen a multiple dockers published to setup XVWA. Our thanks to all of them. Any docker lovers can also checkout below work. https://github.com/tuxotron/xvwa_lamp_container 
 
-> [https://twitter.com/knoself](knoself) made a live ISO for xvwa https://mega.nz/#!4bJ2XRLT!zOa_IZaBz-doqVZz77Rs1tbhXuR8EVBLOHktBGp11Q8 
+> [@knoself](https://twitter.com/knoself) made a live ISO for xvwa https://mega.nz/#!4bJ2XRLT!zOa_IZaBz-doqVZz77Rs1tbhXuR8EVBLOHktBGp11Q8 
 
 ##About 
 XVWA is intentionally designed with many security flaws and enough technical ground to upskill application security knowledge. This whole idea is to evangelize web application security issues. Do let us know your suggestions for improvement or any more vulnerability you would like to see in XVWA future releases. 
