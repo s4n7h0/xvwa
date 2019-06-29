@@ -28,7 +28,10 @@
                </div> 
             </form>
             <?php
-                echo $_GET['item'];
+                if (isset($_GET['item'])) {
+                    echo $_GET['item'];
+                }
+                
             ?>
         </p>
     </div>
