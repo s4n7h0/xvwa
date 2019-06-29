@@ -27,6 +27,7 @@
                             <option value="">Select Item Code</option>
                             <?php 
                             error_reporting(E_ALL);
+                            mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
                             ini_set('display_errors', 1);
                             include('../../config.php');
                             if($conn->connect_errno > 0){
