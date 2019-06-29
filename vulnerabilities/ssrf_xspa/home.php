@@ -31,7 +31,7 @@
                 $image = "";
                 if(isset($_POST['img_url'])){
                     $remote_content = file_get_contents($_POST['img_url']);
-                    $filename = "./images/".rand()."img1.jpg";
+                    $filename = "../../img/".rand()."img1.jpg";
                     file_put_contents($filename, $remote_content);
                     echo $_POST['img_url']."<br>";
                     $image = "<img src=\"".$filename."\" width=\"100\" height=\"100\" />";
