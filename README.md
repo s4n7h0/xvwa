@@ -53,6 +53,9 @@ $user = 'root';
 $pass = 'root';
 ```
 
+Please note that mysql version 5.7 and above requires sudoer to access root user. This means apache user will not be able to use 'root' username to access the database. In such cases, a new username would need to be created and config.php file would also need to be changed accordingly.  
+
+
 Make following changes in PHP configuration file
 
 ```php
