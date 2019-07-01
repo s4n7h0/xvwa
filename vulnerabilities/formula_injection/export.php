@@ -7,7 +7,8 @@ $output = fopen('php://output', 'w');
 fputcsv($output, array('itemcode', 'itemname', 'categ','price'));
 
 include('../../config.php');  
-$rows = mysql_query('SELECT itemcode,itemname,categ,price from caffaine');
+$sql='SELECT itemcode,itemname,categ,price from caffaine';
+$result = $conn->query($sql);
 
-while ($row = mysql_fetch_assoc($rows)) fputcsv($output, $row);
+while ($row = mysqli_fetch_assoc($result)) fputcsv($output, $row);
 ?>

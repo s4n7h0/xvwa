@@ -26,6 +26,7 @@
                         <select class="form-control" name="item">
                             <option value="">Select Item Code</option>
                             <?php
+                            error_reporting(0);
                             include('../../config.php');
                             if($conn->connect_errno > 0){
                                 echo "Error in connecting to database";
