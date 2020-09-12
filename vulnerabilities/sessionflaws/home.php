@@ -19,7 +19,7 @@
         <p>
         <strong>
             <?php
-            if($_SESSION['user']){
+            if(isset($_SESSION['user'])){
                 echo "Welcome ". ucfirst($_SESSION['user']); 
                 echo "<br><br><a href='../../logout.php'>Logout</a>";
             }else{

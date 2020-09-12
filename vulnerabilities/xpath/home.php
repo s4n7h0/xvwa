@@ -32,7 +32,7 @@ XPTH injections are fairly similar to SQL injection with a difference that it us
             <form method='POST' action=''>
                 <div class="form-group"> 
                     <label></label> 
-                    <input type="text" class="form-control" placeholder="Search by ID" name="search" value="<?php echo $input;?>"> </input> <br>
+                    <input type="text" class="form-control" placeholder="Search by ID" name="search" value="<?php if(isset($input)){echo $input;}?>"> </input> <br>
                     <div align="right"> <button class="btn btn-default" name="submit" type="submit">Search</button></div>
                </div> 
             </form>
