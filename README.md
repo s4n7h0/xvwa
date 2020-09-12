@@ -29,6 +29,7 @@ XVWA is designed to understand following security issues.
 
 Good Luck and Happy Hacking!
 
+
 ## Disclaimer 
 
 Do not host this application on live or production environment. XVWA is totally vulnerable application and giving online/live access of this application could lead to complete compromise of your system. We are not responsible for any such bad incidents. Stay safe ! 
@@ -94,6 +95,8 @@ Pass = toor
 ## About 
 XVWA is intentionally designed with many security flaws and enough technical ground to upskill application security knowledge. This whole idea is to evangelize web application security issues. Do let us know your suggestions for improvement or any more vulnerability you would like to see in XVWA future releases. 
 
+
 ## Authors:
+
 - @s4n7h0 https://twitter.com/s4n7h0
 - @samanL33T https://twitter.com/samanl33t 
